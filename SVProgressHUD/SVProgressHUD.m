@@ -104,7 +104,7 @@ CGFloat SVProgressHUDRingThickness = 6;
 
 + (void)showSuccessWithStatus:(NSString *)string duration:(NSTimeInterval)duration {
     [SVProgressHUD show];
-    [SVProgressHUD showImage:[UIImage imageNamed:@"SVProgressHUD.bundle/success.png"] status:string];
+    [SVProgressHUD dismissWithSuccess:string afterDelay:duration];
 }
 
 + (void)showErrorWithStatus:(NSString *)string {
@@ -113,7 +113,7 @@ CGFloat SVProgressHUDRingThickness = 6;
 
 + (void)showErrorWithStatus:(NSString *)string duration:(NSTimeInterval)duration {
     [SVProgressHUD show];
-    [SVProgressHUD showImage:[UIImage imageNamed:@"SVProgressHUD.bundle/error.png"] status:string];
+    [SVProgressHUD dismissWithError:string afterDelay:duration];
 }
 
 + (void)showImage:(UIImage *)image status:(NSString *)string {
