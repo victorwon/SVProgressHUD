@@ -127,6 +127,11 @@ CGFloat SVProgressHUDRingThickness = 6;
 	[[SVProgressHUD sharedView] dismiss];
 }
 
++ (void)dismissAfterDelay:(NSTimeInterval)delay
+{
+    [[SVProgressHUD sharedView] performSelector:@selector(dismiss) withObject:nil afterDelay:delay];
+}
+
 + (void)dismissWithSuccess:(NSString*)string {
 	[SVProgressHUD showSuccessWithStatus:string];
 }

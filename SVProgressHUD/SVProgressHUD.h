@@ -38,6 +38,7 @@ typedef NSUInteger SVProgressHUDMaskType;
 + (void)showImage:(UIImage*)image status:(NSString*)status; // use 28x28 white pngs
 
 + (void)dismiss;
++ (void)dismissAfterDelay:(NSTimeInterval)delay;
 
 + (BOOL)isVisible;
 
