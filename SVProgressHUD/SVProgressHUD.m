@@ -466,7 +466,7 @@ CGFloat SVProgressHUDRingThickness = 6;
                              
                              // fixes bug where keyboard wouldn't return as keyWindow upon dismissal of HUD
                              [[UIApplication sharedApplication].windows enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id window, NSUInteger idx, BOOL *stop) {
-                                 if([window isMemberOfClass:[UIWindow class]]) {
+                                 if([window isMemberOfClass:[UIWindow class]] && ![window isHidden]) {
                                      [window makeKeyWindow];
                                      *stop = YES;
                                  }
